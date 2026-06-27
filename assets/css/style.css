@@ -151,3 +151,155 @@ h2 {
     transform: scale(1.05);
     filter: brightness(0.8);
 }
+
+/* ==========================================================================
+   4. HERO SECTION & BOTÕES (CTA)
+   ========================================================================== */
+#hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: radial-gradient(circle at center, #1a1a1a 0%, var(--bg-principal) 70%);
+    padding: 120px 24px 60px 24px;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.1;
+    margin-bottom: 24px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.hero-content p {
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    color: var(--text-secundario);
+    margin-bottom: 40px;
+    balance: text; /* Evita uma única palavra solta na última linha */
+}
+
+/* Componentes de Botão */
+.btn-cta-principal {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--whatsapp);
+    color: #ffffff;
+    padding: 18px 36px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+    transition: var(--transition);
+}
+
+.btn-cta-principal:hover {
+    background-color: var(--whatsapp-hover);
+    transform: scale(1.02);
+    box-shadow: 0 6px 24px rgba(37, 211, 102, 0.5);
+}
+
+/* ==========================================================================
+   5. DEPOIMENTOS (PROVA SOCIAL)
+   ========================================================================== */
+.grid-depoimentos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+    margin-bottom: 80px;
+}
+
+.card-depoimento {
+    background-color: var(--bg-secundario);
+    padding: 32px;
+    border-radius: var(--radius);
+    border-left: 4px solid var(--accent);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-depoimento .rating {
+    margin-bottom: 16px;
+    font-size: 0.9rem;
+}
+
+.card-depoimento p {
+    color: var(--text-principal);
+    font-style: italic;
+    margin-bottom: 24px;
+}
+
+.cliente-info strong {
+    display: block;
+    color: var(--accent);
+    font-style: normal;
+}
+
+.cliente-info span {
+    font-size: 0.85rem;
+    color: var(--text-secundario);
+    font-style: normal;
+}
+
+/* ==========================================================================
+   6. FAQ NATIVO (<details> e <summary>)
+   ========================================================================== */
+.lista-faq {
+    max-width: 700px;
+    margin: 0 auto 100px auto;
+}
+
+.faq-item {
+    background-color: var(--bg-secundario);
+    margin-bottom: 16px;
+    border-radius: var(--radius);
+    border: 1px solid #222;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.faq-item[open] {
+    border-color: var(--accent);
+}
+
+.faq-item summary {
+    padding: 20px 24px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none; /* Remove a setinha padrão do navegador */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Criando nossa própria setinha customizada e elegante */
+.faq-item summary::after {
+    content: '+';
+    font-size: 1.5rem;
+    color: var(--accent);
+    transition: var(--transition);
+}
+
+.faq-item[open] summary::after {
+    transform: rotate(45deg); /* Transforma o '+' em um 'x' ao abrir */
+}
+
+/* Remove a setinha nativa no Safari */
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-resposta {
+    padding: 0 24px 24px 24px;
+    color: var(--text-secundario);
+    border-top: 1px solid #222;
+    padding-top: 16px;
+}
