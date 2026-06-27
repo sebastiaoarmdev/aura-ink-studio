@@ -303,3 +303,119 @@ h2 {
     border-top: 1px solid #222;
     padding-top: 16px;
 }
+
+/* ==========================================================================
+   7. CABEÇALHO & NAVEGAÇÃO (HEADER)
+   ========================================================================== */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(10, 10, 10, 0.75);
+    backdrop-filter: blur(12px); /* Efeito de vidro jateado moderno */
+    -webkit-backdrop-filter: blur(12px); /* Suporte para Safari */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: var(--transition);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: var(--text-principal);
+    background: linear-gradient(135deg, #fff 0%, var(--accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Efeito de gradiente no texto da logo */
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+
+header ul a {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-secundario);
+    position: relative;
+    padding: 8px 0;
+    transition: var(--transition);
+}
+
+header ul a:hover {
+    color: var(--text-principal);
+}
+
+/* Animação de linha sublinhada charmosa no hover */
+header ul a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent);
+    transition: var(--transition);
+}
+
+header ul a:hover::after {
+    width: 100%;
+}
+
+.btn-cta-small {
+    background-color: transparent;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: var(--radius);
+    transition: var(--transition);
+}
+
+.btn-cta-small:hover {
+    background-color: var(--accent);
+    color: var(--bg-principal);
+}
+
+/* Responsive Menu (Mobile) - Ajuste simples para CSS Puro */
+@media (max-width: 768px) {
+    header ul, header .btn-cta-small {
+        display: none; /* Em um projeto real, faríamos o menu hambúrguer aqui */
+    }
+}
+
+/* ==========================================================================
+   8. RODAPÉ (FOOTER)
+   ========================================================================== */
+footer {
+    background-color: var(--bg-secundario);
+    border-top: 1px solid #222;
+    padding: 40px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-secundario);
+}
+
+footer p {
+    margin-bottom: 8px;
+}
+
+footer .footer-credits {
+    font-size: 0.8rem;
+    margin-top: 16px;
+    color: #555;
+}
