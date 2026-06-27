@@ -305,6 +305,31 @@ h2 {
 }
 
 /* ==========================================================================
+   6.5. CTA FINAL (SEÇÃO CONTATO)
+   ========================================================================== */
+#contato {
+    padding: 100px 24px;
+    text-align: center;
+    background: linear-gradient(180deg, var(--bg-principal) 0%, var(--bg-secundario) 100%);
+    border-top: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+#contato h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-top: 0; /* Reseta o margin padrão das outras seções */
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+}
+
+#contato p {
+    font-size: 1.1rem;
+    color: var(--text-secundario);
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    balance: text;
+}
+
+/* ==========================================================================
    7. CABEÇALHO & NAVEGAÇÃO (HEADER)
    ========================================================================== */
 header {
