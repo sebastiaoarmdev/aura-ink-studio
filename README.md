@@ -2,7 +2,7 @@
 
 Uma Landing Page de alta conversão para um estúdio de tatuagem fictício de alto padrão, focada no direcionamento de leads qualificados para o WhatsApp. Desenvolvida seguindo os padrões mais rígidos de **Código Limpo (Clean Code)**, **Semântica HTML5**, **Acessibilidade (a11y)** e **Web Performance**.
 
-🚀 **[Acesse o projeto rodando ao vivo aqui](https://seu-usuario.github.io/aura-ink-studio/)**
+🚀 **[Acesse o projeto rodando ao vivo aqui](https://sebastiaoarmdev.github.io/aura-ink-studio/)**
 
 ---
 
